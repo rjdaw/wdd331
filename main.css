@@ -11,13 +11,13 @@ a:visited {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 a:active {
   color: #deb887;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 h1,
@@ -41,14 +41,14 @@ header a:visited {
   text-decoration: none;
 }
 
-header a:active {
-  color: #deb887;
-  text-decoration: none;
-}
-
 header a:hover {
   color: white;
   text-decoration: underline;
+}
+
+header a:active {
+  color: #deb887;
+  text-decoration: none;
 }
 
 ul {
@@ -71,14 +71,14 @@ article h2 a:visited {
   text-decoration: none;
 }
 
-article h2 a:active {
-  color: #deb887;
-  text-decoration: none;
-}
-
 article h2 a:hover {
   color: #6495ed;
   text-decoration: underline;
+}
+
+article h2 a:active {
+  color: #deb887;
+  text-decoration: none;
 }
 
 article {
