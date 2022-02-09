@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+//breakpoints
+$break-large: 800px;
+
+//colors
+$background-color: #faebd7;
+$header-color: #6495ed;
+$active-color: #deb887;
+
+@mixin default-values($color, $text-deco: none) {
+  color: $color;
+  text-decoration: $text-deco;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  @include default-values($header-color);
+  &:visited {
+    color: $header-color;
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: $active-color;
+  text-decoration: none;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Lora", serif;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+header {
+  background-color: $header-color;
+  text-align: right;
+  padding: 1.8em;
+}
+
+header a {
+  @include default-values($background-color);
+  &:visited {
+    color: $background-color;
+    text-decoration: none;
+  }
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $active-color;
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li:nth-child(2) {
+  margin: 1em 0;
+}
+
+main {
+  background-color: $background-color;
+  padding: 0.5em 0;
+}
+
+article h2 a {
+  @include default-values(black);
+  &:visited {
+    color: black;
+    text-decoration: none;
+  }
+  &:hover {
+    color: $header-color;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $active-color;
+    text-decoration: none;
+  }
+}
+
+article {
+  background-color: white;
+  margin: 1em 1em 2em 1em;
+  padding: 2em;
+}
+
+.post-date {
+  color: grey;
+}
+
+img {
+  max-width: 100%;
+  text-align: center;
+  padding-top: 2.5em;
+}
+
+figure {
+  text-align: center;
+}
+
+@media screen and (min-width: $break-large) {
+  body div {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+  }
+
+  article {
+    margin: 2em 4em;
+  }
+}

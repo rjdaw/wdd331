@@ -1,0 +1,84 @@
+@use "_variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rowdies:wght@300&display=swap");
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+img {
+  width: 1em;
+}
+
+.events-molecule {
+  display: flex;
+  margin: 2%;
+}
+
+.all-events-link {
+  background-color: var(--primary-color);
+  color: var(--light-secondary);
+  font-family: "Rowdies", cursive;
+  border: none;
+  padding: 1em;
+  width: 15em;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+.all-events-link:hover {
+  background: var(--secondary-color);
+  box-shadow: 0px 3px 15px 7px var(--light-primary);
+  color: var(--light-primary);
+}
+
+.all-events-link:after {
+  background: var(--primary-color);
+  display: block;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.all-events-link:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.container {
+  overflow: hidden;
+  background-color: var(--transparent-primary);
+}
+
+.event-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  animation: cycle linear 35s infinite;
+}
+
+.event-list-item {
+  list-style-type: none;
+  padding: 1em;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+
+.container:hover .event-list {
+  animation-play-state: paused;
+}
+
+@keyframes cycle {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
