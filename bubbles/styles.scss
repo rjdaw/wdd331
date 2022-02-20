@@ -14,7 +14,6 @@ img {
   position: relative;
   width: 330px;
   height: 135px;
-  border: 1px black dotted;
 }
 
 .boxes-container > div > svg {
@@ -41,9 +40,25 @@ img {
   grid-column: 2/3;
 }
 
+.box2 > svg {
+  position: absolute;
+  left: 70px;
+  bottom: 30px;
+  width: 150px;
+  z-index: 5;
+}
+
 .box3 {
   grid-row: 4/5;
   grid-column: 1/2;
+}
+
+.box3 > svg {
+  position: absolute;
+  left: 60px;
+  bottom: 50px;
+  width: 150px;
+  z-index: 5;
 }
 
 .box4 {
@@ -51,11 +66,49 @@ img {
   grid-column: 2/3;
 }
 
-.bubble-text {
+.box4 > svg {
+  position: absolute;
+  left: 45px;
+  bottom: 65px;
+  width: 150px;
+  z-index: 5;
+}
+
+.bubble-text1 {
   position: absolute;
   left: 152px;
   top: 14px;
   font-size: 13px;
   font-family: "Oswald", sans-serif;
   color: white;
+}
+
+.bubble-text2 {
+  position: absolute;
+  left: 132px;
+  top: 6px;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  z-index: 6;
+}
+
+.bubble-text3 {
+  position: absolute;
+  left: 120px;
+  bottom: 97px;
+  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  z-index: 6;
+}
+
+.bubble-text4 {
+  position: absolute;
+  left: 106px;
+  bottom: 109px;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  z-index: 6;
 }
