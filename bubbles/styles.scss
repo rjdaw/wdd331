@@ -1,8 +1,9 @@
+@use "_variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 
 .boxes-container {
   display: grid;
-  grid-template-columns: 330px 330px;
+  grid-template-columns: var(--box-width) var(--box-width);
   grid-template-rows: repeat(5, 135px);
 }
 
@@ -12,13 +13,13 @@ img {
 
 .boxes-container > div {
   position: relative;
-  width: 330px;
+  width: var(--box-width);
   height: 135px;
 }
 
 .boxes-container > div > svg {
   max-width: 100%;
-  fill: #433da8;
+  fill: var(--primary-color);
 }
 
 .boxes-container > div {
@@ -44,7 +45,7 @@ img {
   position: absolute;
   left: 70px;
   bottom: 30px;
-  width: 150px;
+  width: var(--bubble-size);
   z-index: 5;
 }
 
@@ -57,7 +58,7 @@ img {
   position: absolute;
   left: 60px;
   bottom: 50px;
-  width: 150px;
+  width: var(--bubble-size);
   z-index: 5;
 }
 
@@ -70,7 +71,7 @@ img {
   position: absolute;
   left: 45px;
   bottom: 65px;
-  width: 150px;
+  width: var(--bubble-size);
   z-index: 5;
 }
 
@@ -80,7 +81,20 @@ img {
   top: 14px;
   font-size: 13px;
   font-family: "Oswald", sans-serif;
-  color: white;
+  color: var(--secondary-color);
+}
+
+.boxes-container > div:hover .bubble-text::before {
+  content: "";
+  background: var(--primary-color);
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  height: 80%;
+  animation: reveal 0.5s forwards;
+  animation-timing-function: linear;
+  animation-delay: 0.1s;
+  right: 0;
 }
 
 .bubble-text2 {
@@ -89,7 +103,7 @@ img {
   top: 6px;
   font-size: 16px;
   font-family: "Oswald", sans-serif;
-  color: white;
+  color: var(--secondary-color);
   z-index: 6;
 }
 
@@ -99,7 +113,7 @@ img {
   bottom: 97px;
   font-size: 14px;
   font-family: "Oswald", sans-serif;
-  color: white;
+  color: var(--secondary-color);
   z-index: 6;
 }
 
@@ -109,6 +123,15 @@ img {
   bottom: 109px;
   font-size: 16px;
   font-family: "Oswald", sans-serif;
-  color: white;
+  color: var(--secondary-color);
   z-index: 6;
+}
+
+@keyframes reveal {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
