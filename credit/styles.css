@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+.top-menu {
+  margin: 0;
+}
+
+#inner-header {
+  display: grid;
+  position: absolute;
+  grid-template-columns: 2fr 1fr;
+  background: #1c8900;
+}
+
+.top-ul {
+  display: flex;
+  color: #fff;
+  font-family: "proxima-nova", sans-serif;
+  list-style-type: none;
+  padding-right: 1em;
+  padding-left: 20%;
+  grid-column: 1/2;
+}
+
+.top-ul a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.eBranch {
+  display: flex;
+  grid-column: 2/3;
+  display: flex;
+  background: #1c8900;
+  color: #fff;
+  font-family: "proxima-nova", sans-serif;
+  list-style-type: none;
+  padding-top: 1em;
+}
+
+#ebranch-login-dropdown {
+  display: none;
+}
+
+form {
+  position: relative;
+}
+
+/*# sourceMappingURL=styles.css.map */
